@@ -1,0 +1,40 @@
+.container {
+    max-width: 800px; /* กำหนดความกว้างสูงสุดของกล่อง */
+    margin: 0 auto;    /* ดึงให้กล่องอยู่กึ่งกลางหน้าจอ */
+    padding: 20px;     /* เผื่อพื้นที่ด้านข้างไม่ให้ชิดจอเวลาจอมือถือเล็กๆ */
+
+}
+
+.hero {
+    display: flex;
+    flex-direction: column; /* เรียงจากบนลงล่าง */
+    justify-content: center; /* สั่งให้ลูก (ซึ่งก็คือรูป) อยู่ตรงกลางในแนวนอน */
+    width: 100%;             /* ให้กล่องแม่เต็มความกว้างจอ */
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.hero-content h1{
+    font-size: 48px;       /*ขนาดของตัวอักษร*/
+    font-weight: 700;      /*ไม่ได้บอกถึงขนาดจะเล็กหรือใหญ่แต่บอกถึงความหนา บาง ของตัวหนังสือ*/
+    line-height: 1.3;     /*การกำหนดระยะห่างระหว่างบรรทัดของข้อความ*/
+}
+
+.hero-content p{
+    font-size: 26.1px;
+    font-weight: 600;
+    line-height: 1.3; 
+}
+
+.hero-content {
+    padding-left: 60px; /* ปรับตัวเลขพิกเซลตามความต้องการว่าอยากให้เขยิบมากแค่ไหน */
+}
+
+.hero img{
+    max-width: 800px;        /* จำกัดความกว้างสูงสุดของรูป ไม่ให้บานเต็มจอ */
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+}

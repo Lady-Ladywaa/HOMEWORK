@@ -1,0 +1,68 @@
+/* จัดกล่องแม่ให้แบ่งเป็น 2 ฝั่ง ซ้าย-ขวา */
+.generation{
+    display: flex;
+    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    gap: 40px;           /* ระยะห่างระหว่างฝั่งซ้ายกับฝั่งขวา */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f7f7f8;
+}
+
+/* กำหนดขนาดกล่องฝั่งซ้าย (รูปและปุ่ม) ให้กว้างพอดีๆ ไม่ล้นจอ */
+.gen-image-box {
+   width: 450px; /* ล็อกขนาดรูปไว้พอดีๆ ไม่ให้ใหญ่เกินไป */
+   flex-shrink: 0;
+}
+
+/* ทำให้รูปภาพวิ่งเต็มความกว้างของกล่องแม่ที่มันอยู่ (ซึ่งถูกจำกัดไว้ที่ 450px แล้ว) */
+.gen-image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    display: block;
+    filter: drop-shadow(20px 20px #0074b9);
+}
+
+/* กำหนดขนาดกล่องฝั่งขวา (ข้อความ) */
+.gen-content {
+    flex: 1;             /* แบ่งพื้นที่ฝั่งขวา */
+}
+
+.gen-content h2 {
+    font-size: 52px; /* ปรับขนาดตัวหนังสือหัวข้อให้ใหญ่สวยเท่าของโค้ช */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-wrap: pretty;
+    
+}
+
+.hero-content{
+    line-height: 1.07;
+    margin: 0 0 2rem;
+}
+
+.gen-content p {
+    font-size: 21px;
+    line-height: 1.6; /* เพิ่มระยะห่างระหว่างบรรทัดให้อ่านง่าย */
+    color: #333;
+}
+
+.gen-content button{
+    filter: drop-shadow(4px 4px #020000);
+    border: 2px solid #000203;
+    background-color: #80b9dc;
+    border-radius: 10px;
+    align-items: center;
+    display: inline-flex;
+    padding: 10px 24px;
+    font-size: 16px;
+}
+
+.gen-content button:hover {
+    background-color: #68a4d4;
+}

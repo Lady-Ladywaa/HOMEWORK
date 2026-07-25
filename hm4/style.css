@@ -1,0 +1,87 @@
+.box-hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px; /* กำหนดความกว้างสูงสุดของกล่อง */
+    margin: 0 auto;   /* คำสั่งนี้จะช่วยดันซ้าย-ขวาให้อัตโนมัติ กล่องจะไปอยู่ตรงกลางจอพอดี */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background-color: #f7f7f8;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.container {
+    max-width: 1200px; /* กำหนดความกว้างสูงสุดของกล่อง */
+    margin: 0 auto;    /* ดึงให้กล่องอยู่กึ่งกลางหน้าจอ */
+    padding: 20px;     /* เผื่อพื้นที่ด้านข้างไม่ให้ชิดจอเวลาจอมือถือเล็กๆ */
+}
+
+
+.box-hero {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* ให้ความสูงเต็มช่อง */
+}
+
+.grid-hero {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.block-column .content-background{
+    background-color: #2b9348;
+    color: #070707; /* เปลี่ยนเป็นสีขาวเพื่อให้ตัดกับพื้นหลังเขียวและอ่านง่ายเหมือนต้นฉบับ */
+    font-size: 52px; /* ปรับลดลงนิดนึงจาก 60px ป้องกันตัวเลขยาวๆ ล้นป้าย */
+    font-weight: 700;
+    border-radius: 12px;
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 16px;
+}
+
+.content-background-size {
+    background-color: #2b9348;
+    color: #080808; /* เปลี่ยนเป็นสีขาวเพื่อให้ตัดกับพื้นหลังเขียวและอ่านง่ายเหมือนต้นฉบับ */
+    font-size: 52px; /* ปรับลดลงนิดนึงจาก 60px ป้องกันตัวเลขยาวๆ ล้นป้าย */
+    font-weight: 700;
+    border-radius: 12px;
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 16px;
+}
+
+.hero-bottom-section .block-column p{
+    font-weight: 500;
+    max-width: 320px;
+    line-height: 1.4;
+}
+
+.hero-content{
+    font-size: 36px;
+    margin: 0 0 1.0rem;
+}
+
+.content-background {
+    display: inline-block;        /* ทำให้กล่องหดตัวพอดีกับขนาดตัวเลข */
+    font-size: 75px;
+    font-weight: bold;
+    padding: 10px 20px;           /* ระยะห่างขอบใน */
+    border-radius: 12px;          /* ความโค้งมนของป้าย */
+    margin-bottom: -0.5rem;
+    width: fit-content;
+}
+
+.box-content{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+

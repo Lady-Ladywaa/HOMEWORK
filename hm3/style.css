@@ -45,21 +45,52 @@ body{
     height: 100%; /* ให้ความสูงเต็มช่อง */
 }
 
+.grid-hero {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .content-background {
-    display: block;        /* บังคับให้ตัวเลขขึ้นบรรทัดใหม่จากข้อความ */
-    font-size: 32px;       /* ปรับขนาดตัวเลขให้เด่นชัด (หรือตามดีไซน์เดิม) */
+    display: inline-block;        /* ทำให้กล่องหดตัวพอดีกับขนาดตัวเลข */
+    font-size: 75px;
     font-weight: bold;
-    margin-top: 1rem;      /* เว้นระยะห่างด้านบนจากข้อความก่อนหน้า */
-    margin-bottom: 0.3rem; /* เว้นระยะห่างด้านล่างก่อนเข้าข้อความบรรทัดถัดไป */
+    padding: 10px 20px;           /* ระยะห่างขอบใน */
+    border-radius: 12px;          /* ความโค้งมนของป้าย */
+    margin-bottom: -0.5rem;
+    width: fit-content;
+}
+
+/* 1. คอลัมน์ที่ 1 (Breadth): พื้นหลังสีฟ้า ตัวหนังสือสีขาว */
+.box-hero:nth-child(1) .content-background {
+    background-color: #0077b6; /* ปรับเฉดสีฟ้าตามต้นฉบับ */
+    color: #ffffff;
+}
+
+/* 2. คอลัมน์ที่ 2 (Depth): พื้นหลังสีเขียว ตัวหนังสือสีขาว */
+.box-hero:nth-child(2) .content-background {
+    background-color: #2b9348; /* ปรับเฉดสีเขียวตามต้นฉบับ */
+    color: #0a0a0a;
+}
+
+/* 3. คอลัมน์ที่ 3 (Durability): พื้นหลังสีเหลือง ตัวหนังสือสีดำ */
+.box-hero:nth-child(3) .content-background {
+    background-color: #ffb703; /* ปรับเฉดสีเหลืองตามต้นฉบับ */
+    color: #000000;
+    font-size: 48px;
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 16px;
 }
 
 .hero-content{
     font-size: 36px;
-    margin: 0 0 1.5rem;
+    margin: 0 0 1.0rem;
 }
 
 .box-content{
     font-size: 16px;
+    line-height: 1.5;
 }
 
 .box-hero .grid-hero >p{      /* กำหนดให้ส่วนหัวข้อและข้อความนำของทุกกล่องมีความสูงเท่ากัน บรรทัดถัดไปจะได้ไม่เหลื่อมกัน */
@@ -81,13 +112,74 @@ body{
 /* สั่งให้กล่องแม่ของ Durability เรียงตัวเลข 3 ตัวเป็นแนวนอน */
 .durability-row {
     display: flex;
-    gap: 15px; /* ระยะห่างระหว่างกล่องเหลืองทั้ง 3 */
+    gap: 10px; /* ระยะห่างระหว่างกล่องเหลืองทั้ง 3 */
+    align-items: flex-start;
+}
+
+/* แก้ไขเฉพาะป้ายสีเหลืองในกล่อง Durability */
+.durability-row .content-background {
+    display: inline-block;     /* สำคัญ: บังคับให้ป้ายหดตัวพอดีกับเนื้อหาข้างใน */
+    width: fit-content;        /* สำคัญ: บังคับให้ป้ายกว้างเท่าที่เนื้อหาต้องการ */
+    margin-bottom: 0.3rem;
 }
 
 /* ปรับสไตล์กล่องย่อยให้เรียงตั้งลงไปข้างในกล่องใครกล่องมัน */
 .durability-row .small-box {
     display: flex;
     flex-direction: column;
+}
+
+.box-hero, .grid-hero {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.hero-top-section p{
+    max-width: 320px; /* ปรับค่าตัวเลขนี้ (เช่น 300px - 340px) จนกว่าข้อความจะตัดลงเป็น 2 บรรทัดสวยงาม */
+    margin-bottom: 1.5rem; /* รักษาระยะห่างด้านล่างไว้เหมือนเดิม */
+}
+
+.hero-bottom-section .block-column p{
+    font-weight: 500;
+    max-width: 320px;
+    line-height: 1.4;
+}
+
+.box-hero:nth-child(2) .content-background-size{
+    background-color: #2b9348; /* ปรับเฉดสีเขียวตามต้นฉบับ */
+    color: #0c0c0c;
+    font-size: 60px;
+    font-weight: 700;
+    border-radius: 12px; 
+    display: inline-block;     /* สำคัญ: บังคับให้ป้ายหดตัวพอดีกับเนื้อหาข้างใน */
+    width: fit-content;        /* สำคัญ: บังคับให้ป้ายกว้างเท่าที่เนื้อหาต้องการ */
+    padding: 6px 16px;
+} 
+
+.box-button{
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    filter: drop-shadow(3px 3px #000000);
+    border: 2px solid #001725;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 2rem;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.box-button a {
+    text-decoration: none !important; /* บังคับตัดเส้นใ้ออกเด็ดขาด */
+    color: #001725 !important;        /* บังคับให้ตัวหนังสือเป็นสีดำเข้มตามธีม */
+}
+
+.box-button:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 08)
 }
 
 

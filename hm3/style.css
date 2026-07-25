@@ -1,0 +1,97 @@
+.areas{
+    gap: 40px; 
+    margin: 0;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background-color: #f7f7f8;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-header{
+    margin: 0 0 1.5rem;
+}
+
+
+.hero-heading h2{
+    padding: 0;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.head-block h2{
+    display: flex;
+    font-size: 36px;
+}
+
+.grid-block-3-column{
+    gap: 2rem 1rem;
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2.5rem;
+    align-items: start; /* ให้เนื้อหาในแต่ละกล่องเริ่มเรียงจากด้านบนเหมือนกัน */
+}
+
+.box-hero {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* ให้ความสูงเต็มช่อง */
+}
+
+.content-background {
+    display: block;        /* บังคับให้ตัวเลขขึ้นบรรทัดใหม่จากข้อความ */
+    font-size: 32px;       /* ปรับขนาดตัวเลขให้เด่นชัด (หรือตามดีไซน์เดิม) */
+    font-weight: bold;
+    margin-top: 1rem;      /* เว้นระยะห่างด้านบนจากข้อความก่อนหน้า */
+    margin-bottom: 0.3rem; /* เว้นระยะห่างด้านล่างก่อนเข้าข้อความบรรทัดถัดไป */
+}
+
+.hero-content{
+    font-size: 36px;
+    margin: 0 0 1.5rem;
+}
+
+.box-content{
+    font-size: 16px;
+}
+
+.box-hero .grid-hero >p{      /* กำหนดให้ส่วนหัวข้อและข้อความนำของทุกกล่องมีความสูงเท่ากัน บรรทัดถัดไปจะได้ไม่เหลื่อมกัน */
+    min-height: 50px;        /* ปรับตัวเลขนี้เพิ่ม-ลดตามความเหมาะสมของข้อความที่ยาวที่สุด */
+}
+
+.block-small {
+    margin-top: 1rem;
+}
+
+.small-block {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+/* สั่งให้กล่องแม่ของ Durability เรียงตัวเลข 3 ตัวเป็นแนวนอน */
+.durability-row {
+    display: flex;
+    gap: 15px; /* ระยะห่างระหว่างกล่องเหลืองทั้ง 3 */
+}
+
+/* ปรับสไตล์กล่องย่อยให้เรียงตั้งลงไปข้างในกล่องใครกล่องมัน */
+.durability-row .small-box {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
